@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Command OS - Operator Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+  <div class="app-container">
+    
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <i data-feather="navigation" class="brand-icon"></i>
+        <span class="brand-text">AccelUAV Sim</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" title="Dashboard">
+          <i data-feather="grid"></i><span class="nav-text">Dashboard</span>
+        </a>
+        <a href="#" class="nav-item" title="Training Academy">
+          <i data-feather="book-open"></i><span class="nav-text">Training Academy</span>
+        </a>
+        <a href="#" class="nav-item" title="Flight Simulator">
+          <i data-feather="monitor"></i><span class="nav-text">Flight Simulator</span>
+        </a>
+        <a href="#" class="nav-item" title="Flight Logs">
+          <i data-feather="database"></i><span class="nav-text">Flight Logs</span>
+        </a>
+        <a href="#" class="nav-item" title="Assessment Center">
+          <i data-feather="check-circle"></i><span class="nav-text">Assessment Center</span>
+        </a>
+        <a href="#" class="nav-item" title="Settings">
+          <i data-feather="settings"></i><span class="nav-text">Settings</span>
+        </a>
+      </nav>
+      <button class="toggle-btn" id="sidebarToggle" title="Collapse Sidebar">
+        <i data-feather="chevron-left"></i>
+      </button>
+    </aside>
+
+    <main class="main-content">
+      
+      <header class="top-nav">
+        <div class="nav-left">
+          <span class="breadcrumb">Home / <strong>Dashboard</strong></span>
+        </div>
+        <div class="nav-center">
+          <div class="search-bar">
+            <i data-feather="search"></i>
+            <input type="text" placeholder="Search modules, logs, or flights...">
+          </div>
+        </div>
+        <div class="nav-right">
+          <button class="icon-btn"><i data-feather="bell"></i></button>
+          <button class="icon-btn"><i data-feather="message-square"></i></button>
+          <div class="user-profile">
+            <div class="avatar">H</div>
+            <div class="profile-info">
+              <span class="profile-name">Hemanth</span>
+              <span class="profile-role">Student Pilot</span>
+            </div>
+            <i data-feather="chevron-down" class="profile-dropdown"></i>
+          </div>
+        </div>
+      </header>
+
+      <div class="dashboard-scroll-area">
+        
+        <section class="hero-section card">
+          <div class="hero-welcome">
+            <h1>Good Morning, Hemanth</h1>
+            <span class="status-badge status-student">Student Pilot Active</span>
+          </div>
+          <div class="hero-progress">
+            <div class="progress-stat">
+              <span class="stat-label">Training Completion</span>
+              <div class="progress-bar-container"><div class="progress-bar" style="width: 65%;"></div></div>
+            </div>
+            <div class="progress-stat">
+              <span class="stat-label">Total Flight Hours</span>
+              <span class="stat-value">142.5 hrs</span>
+            </div>
+            <div class="progress-stat">
+              <span class="stat-label">Certification Progress</span>
+              <div class="progress-bar-container"><div class="progress-bar progress-warning" style="width: 40%;"></div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-header"><i data-feather="clock"></i> Flight Hours</div>
+            <div class="kpi-value">142.5</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-header"><i data-feather="target"></i> Missions</div>
+            <div class="kpi-value">24</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-header"><i data-feather="book"></i> Training</div>
+            <div class="kpi-value">65%</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-header"><i data-feather="award"></i> Cert. Status</div>
+            <div class="kpi-value warning-text">Pending</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-header"><i data-feather="pie-chart"></i> Assess. Score</div>
+            <div class="kpi-value success-text">88%</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-header"><i data-feather="monitor"></i> Sim Hours</div>
+            <div class="kpi-value">45.0</div>
+          </div>
+        </section>
+
+        <section class="timeline-section card">
+          <h2>Training Progression Path</h2>
+          <div class="timeline">
+            <div class="timeline-step completed">Registration</div>
+            <div class="timeline-step completed">Theory Training</div>
+            <div class="timeline-step active">Simulator Training</div>
+            <div class="timeline-step locked">Flying Lessons</div>
+            <div class="timeline-step locked">Certification</div>
+          </div>
+        </section>
+
+        <section class="data-section card">
+          <div class="section-header">
+            <h2>Recent Flight Logs</h2>
+            <button class="btn-primary">View All</button>
+          </div>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Aircraft / System</th>
+                  <th>Hardware Configuration</th>
+                  <th>Duration</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2026-06-22</td>
+                  <td>Training Quad Alpha</td>
+                  <td>MAD 80A AMPX ESC</td>
+                  <td>2.5 hrs</td>
+                  <td><span class="badge success">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>2026-06-18</td>
+                  <td>Observation Hex</td>
+                  <td>SIYI A2 Mini Gimbal</td>
+                  <td>1.8 hrs</td>
+                  <td><span class="badge success">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>2026-06-15</td>
+                  <td>Heavy Lift Mk1</td>
+                  <td>MK32 Ground Station</td>
+                  <td>3.0 hrs</td>
+                  <td><span class="badge warning">Under Review</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
